@@ -1,0 +1,57 @@
+/**********************DATA TABLE CSS*/
+table.dataTable {border-spacing: 0px 20px !important; }
+table.dataTable tbody tr td ul.onhover {position: absolute; opacity: 0; transition: .5s !important; transform: scale(0); box-shadow: 0px 0px 10px 0px #00000047; border: 1px solid #e0e0e0; border-radius: 7px !important; overflow: hidden; background-color: #fff; z-index: 999; }
+table.dataTable tbody td:hover ul.onhover {opacity: 1; transform: scale(1); }
+table.dataTable tbody tr td ul li {list-style: none; }
+table.dataTable tbody tr td ul.onhover li a {padding: 3px 20px; font-size: 15px; transition: .5s !important; display: inline-block; width: 100%; border-bottom: 1px solid #e0e0e0; color: #848484; }
+table.dataTable tbody tr td ul li a:hover {color: #ea3715; }
+table.dataTable tbody tr td ul li a i {margin: 0px 7px 0px 0px; }
+table.dataTable.order-column tbody tr>.sorting_1, table.dataTable.order-column tbody tr>.sorting_2, table.dataTable.order-column tbody tr>.sorting_3, table.dataTable.display tbody tr>.sorting_1, table.dataTable.display tbody tr>.sorting_2, table.dataTable.display tbody tr>.sorting_3 {background-color: transparent !important; }
+table.dataTable tbody tr {box-shadow: 0px 0px 10px 0px #00000026; border-radius: 5px !important; overflow: hidden; }
+table.dataTable thead th, table.dataTable tfoot th {font-weight: 600 !important; }
+table.dataTable tbody th, table.dataTable tbody td {padding: 13px 20px !important; border-radius: 0px !important; font-size: 15px; }
+table.dataTable.no-footer {border: none !important; }
+table.dataTable thead th, table.dataTable thead td {border: none !important; }
+table.dataTable thead tr th {text-transform: capitalize; color: #000 !important; font-size: 15px; }
+div#example_length label {display: flex; align-items: center;font-size:15px;font-weight:600;color:#000; }
+div#example_length label select {margin: 0px 10px; width: 100px; height: 36px; background-color:#fff !important; }
+div#example_filter label {display: flex; align-items: center; font-size:15px;font-weight:600;color:#000;}
+html body .dataTables_wrapper .dataTables_paginate .paginate_button.current, html body .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {color: #fff !important; border: #7eb037!important; background: #7eb037 !important; }
+table.dataTable tbody tr {background-color: #fff; }
+table.dataTable tbody tr {box-shadow: 0px 0px 10px 0px #00000026; border-radius: 5px !important; overflow: hidden; }
+div#example_length label select, .dataTables_wrapper .dataTables_filter input {border: 1px solid #00000029 !important; box-shadow: none !important;border-radius:50px !important;background-color:#fff !important;}
+/**********************DATA TABLE CSS*/
+
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+<script>
+jQuery(document).ready(function() {
+    jQuery('#example').DataTable();
+});
+</script>
+
+
+
+
+
+<div class="scroll">
+    <table id="example" class="order-column" style="width:100%">
+          <thead>
+              	<tr>
+                  	<th>S.No</th>
+                  	<th>Membership Class</th>
+                  	<th>Date</th>
+                	<th>Cost</th>
+              	</tr>
+          </thead>
+          <tbody>
+              	<tr>
+                  	<td>2</td>
+                  	<td>Membership Class A</td>
+                  	<td>10/04/2021</td>
+                  	<td>$50</td>
+              	</tr>
+          </tbody>
+    </table>
+</div>

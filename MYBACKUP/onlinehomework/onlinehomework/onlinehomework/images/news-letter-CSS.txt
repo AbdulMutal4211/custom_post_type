@@ -1,0 +1,18 @@
+div#newsletterwidgetminimal-2 {
+    position: relative;
+    margin: auto;
+    display: table;
+}
+#footer-outer #footer-widgets .col input[type=text], #footer-outer #footer-widgets .col input[type=email] {
+    padding: 15px;
+    width: 100%;
+    border-radius: 0 !important;
+    position: relative;
+}
+#footer-outer #footer-widgets div#newsletterwidgetminimal-2 input.tnp-submit {
+    position: absolute;
+    width: unset;
+    right: 0;
+    border-radius: 0 !important;
+    padding: 11px 35px;
+}

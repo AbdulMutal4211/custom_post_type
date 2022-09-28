@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<style>
+.myCheck {
+  display: block;
+  position: relative;
+  /* padding-left: 35px; */
+  margin-bottom: 12px;
+  cursor: pointer;
+  /* font-size: 22px; */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.myCheck input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.myMark {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  /* height: 25px; */
+  /* width: 25px; */
+  background-color: #eee;
+  padding: 4px 19px;
+  display: inline-block;
+  transition: .5s;
+}
+.myCheck:hover input ~ .myMark {
+  background-color: #ccc;
+}
+.myCheck input:checked ~ .myMark {
+  background-color: red;
+}
+.myMark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+
+/*.myCheck input:checked ~ .myMark:after {
+  display: block;
+}
+.myCheck .myMark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}*/
+</style>
+<body>
+
+<label class="myCheck">
+  <input type="checkbox" checked="checked">
+  <span class="myMark">One</span>
+</label>
+<label class="myCheck">
+  <input type="checkbox">
+  <span class="myMark">Two</span>
+</label>
+<label class="myCheck">
+  <input type="checkbox">
+  <span class="myMark">Three</span>
+</label>
+<label class="myCheck">
+  <input type="checkbox">
+  <span class="myMark">Four</span>
+</label>
+
+</body>
+</html>

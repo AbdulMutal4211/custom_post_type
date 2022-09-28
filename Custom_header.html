@@ -1,0 +1,185 @@
+<style>
+/*******************CUSTOM HEADER*/
+
+.custom_header .col {width: 100% !important; margin: 0 !important;}
+.dashboard_wrap {background-color: #f8f8f8;}
+.custom_header {width: 100%; display: flex; align-items: center; background-color: #fff;padding: 5px 20px;}
+.logo_box img {width: 200px; margin-top: 12px; }
+.logo_box {margin: 0px 0px;}
+ul.notifi_wrap {margin: 0px 0px 0px auto; display: flex; align-items: center; float: right;}
+ul.notifi_wrap li {display: inline-block; margin: 0px 5px; }
+ul.notifi_wrap img {width: 50px; margin-right: 10px; height: 50px; object-fit: cover; border-radius: 50%; }
+.myDrpdown {position: absolute; z-index: 9999; width: 400px; right: 20px; background-color: #ffff; box-shadow: 0px 0px 15px 0px #00000029; border-radius: 10px; padding: 20px; top: 100px; transition: .5s !important; z-index: -1; opacity: 0; }
+a.dropDown h6 {margin: 0 !important; font-size: 20px; font-weight: 600; color: #000; }
+ul.notifi_wrap i.fa.fa-bell {font-size: 25px; color: #0000003d; } 
+.D_header {width: 100%; display: inline-block; }
+.D_title {float: left; }
+.D_icon i {font-size: 30px; color: #c2c2c2; }
+.notification_box {display: flex; padding: 10px 20px; }
+.notification_box p {padding: 0; } 
+.D_body {height: 400px; overflow-y: scroll; }
+span.noti_time {font-weight: 600; }
+.D_icon {float: right; }
+.D_footer {display: inline-block; width: 100%; margin-top: 20px; }
+a.dropDown {display: flex; align-items: center; }
+.noti_open {opacity: 1 !important; z-index: 99999 !important; top: 65px; }
+.noti_dot {width: 8px; height: 8px; background-color: red; border-radius: 50%; position: absolute; top: 0; right: 0; }
+ul.notifi_wrap li a {position: relative; }
+.D_body .notification_box:nth-child(even) {background-color: #2f83de1a; }
+ul.notifi_wrap li a {position: relative; color: #000; font-weight: 600; }
+.myDrpdown ul li {display: inherit; margin: 7px 0px; }
+.myDrpdown ul {margin: 0; }
+.D_profile {width: 205px; }
+.D_profile ul li a {display: inline-block; width: 100%; padding: 3px 9px; transition: .5s !important; }
+.D_profile ul li a:hover {background-color: #2f83de24; }
+.drop_txt {margin-right: 10px; }
+/*******************CUSTOM HEADER*/      
+</style>
+
+<?php include 'header/header.php';?>
+<div class="custom_header">
+    <div class="col span_2 logo_box">
+        <a id="logo" href="<?php echo esc_url( home_url() ); ?>">
+            <?php nectar_logo_output(); ?> 
+        </a>
+    </div>
+    <div class="col span_10 right_menu">
+        <ul class="notifi_wrap">
+            <li>
+                <a href="javascript:;" class="dropDown">
+                    <i class="fa fa-bell" aria-hidden="true"></i>
+                    <div class="noti_dot"></div>
+                </a>
+                <div class="myDrpdown">
+                     <div class="D_header">
+                        <div class="D_title">
+                            <h5>Notifications</h5>
+                        </div>
+                        <div class="D_icon">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                        </div>
+                    </div> 
+                    <div class="D_body">
+                        <div class="notification_box">
+                            <img src="<?= home_url() . '/wp-content/uploads/2021/07/Ellipse.png' ?>">
+                            <div class="drop_txt">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetu.</p>
+                                <span class="noti_time">2 Min ago</span>
+                            </div>
+                        </div>
+                        <div class="notification_box">
+                            <img src="<?= home_url() . '/wp-content/uploads/2021/07/Ellipse.png' ?>">
+                            <div class="drop_txt">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetu.</p>
+                                <span class="noti_time">2 Min ago</span>
+                            </div>
+                        </div>
+                        <div class="notification_box">
+                            <img src="<?= home_url() . '/wp-content/uploads/2021/07/Ellipse.png' ?>">
+                            <div class="drop_txt">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetu.</p>
+                                <span class="noti_time">2 Min ago</span>
+                            </div>
+                        </div>
+                        <div class="notification_box">
+                            <img src="<?= home_url() . '/wp-content/uploads/2021/07/Ellipse.png' ?>">
+                            <div class="drop_txt">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetu.</p>
+                                <span class="noti_time">2 Min ago</span>
+                            </div>
+                        </div>
+                        <div class="notification_box">
+                            <img src="<?= home_url() . '/wp-content/uploads/2021/07/Ellipse.png' ?>">
+                            <div class="drop_txt">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetu.</p>
+                                <span class="noti_time">2 Min ago</span>
+                            </div>
+                        </div>
+                        <div class="notification_box">
+                            <img src="<?= home_url() . '/wp-content/uploads/2021/07/Ellipse.png' ?>">
+                            <div class="drop_txt">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetu.</p>
+                                <span class="noti_time">2 Min ago</span>
+                            </div>
+                        </div>
+                        <div class="notification_box">
+                            <img src="<?= home_url() . '/wp-content/uploads/2021/07/Ellipse.png' ?>">
+                            <div class="drop_txt">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetu.</p>
+                                <span class="noti_time">2 Min ago</span>
+                            </div>
+                        </div>
+                        <div class="notification_box">
+                            <img src="<?= home_url() . '/wp-content/uploads/2021/07/Ellipse.png' ?>">
+                            <div class="drop_txt">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetu.</p>
+                                <span class="noti_time">2 Min ago</span>
+                            </div>
+                        </div>
+                        <div class="notification_box">
+                            <img src="<?= home_url() . '/wp-content/uploads/2021/07/Ellipse.png' ?>">
+                            <div class="drop_txt">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetu.</p>
+                                <span class="noti_time">2 Min ago</span>
+                            </div>
+                        </div>
+                        <div class="notification_box">
+                            <img src="<?= home_url() . '/wp-content/uploads/2021/07/Ellipse.png' ?>">
+                            <div class="drop_txt">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetu.</p>
+                                <span class="noti_time">2 Min ago</span>
+                            </div>
+                        </div>
+                        <div class="notification_box">
+                            <img src="<?= home_url() . '/wp-content/uploads/2021/07/Ellipse.png' ?>">
+                            <div class="drop_txt">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetu.</p>
+                                <span class="noti_time">2 Min ago</span>
+                            </div>
+                        </div>
+                        <div class="notification_box">
+                            <img src="<?= home_url() . '/wp-content/uploads/2021/07/Ellipse.png' ?>">
+                            <div class="drop_txt">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetu.</p>
+                                <span class="noti_time">2 Min ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="D_footer">
+                        <div class="D_icon">
+                            <a href="#" class="simple_btn">Mark all as read</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a href="javascript:;" class="dropDown">
+                    <img src="<?= home_url().'/wp-content/uploads/2021/07/Ellipse.png' ?>">
+                    <div class="drop_txt">
+                        <h6>Angelena</h6>
+                    </div>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                </a>
+                <div class="myDrpdown D_profile">
+                    <ul>
+                        <li><a href="<?= home_url('my-profile'); ?>"><i class="fa fa-user-circle" aria-hidden="true"></i> My Profile</a></li>
+                        <li><a href="<?= home_url('logout'); ?>"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+/////////////////////////////////////////////////////////NOTIFICATION JS        
+jQuery('a.dropDown').click(function(){
+    jQuery('.myDrpdown').removeClass('noti_open');
+    jQuery(this).next().toggleClass('noti_open');
+}); 
+jQuery('.dashboard_wrap').click(function(){
+    jQuery('.myDrpdown').removeClass('noti_open');
+});     
+
+/////////////////////////////////////////////////////////NOTIFICATION JS        
+</script>

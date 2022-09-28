@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>clock</title>
+</head>
+<style>
+#time{width: 100%;font-size:70px;}	
+
+</style>
+<body>
+<div id="time"></div>
+<div class="day"></div>
+<script type="text/javascript">
+
+	setInterval(myClock , 500)
+
+	function myClock(){
+	   var time     = new Date();
+	   var hours    = time.getHours();
+	   var minutes  = time.getMinutes();
+	   var seconds  = time.getSeconds();
+	   var n = weekday[d.getDay()];
+	   var day      = "AM"
+	   if (hours == 12) {
+	   	day = "PM";
+	   }
+
+       if (hours > 12) {
+        hours = hours - 12;
+       }
+
+       if (hours == 0) {
+        hours = 12;
+       }
+
+
+       if (hours < 10) {
+       	hours = '0' + hours;
+       }
+       if (minutes < 10) {
+       	minutes = '0' + minutes;
+       }
+       if (seconds < 10) {
+       	seconds = '0' + seconds;
+       }
+
+       document.getElementById('time').innerHTML = `
+       <div class="my_timer">
+       	<ul>
+       		<li>
+				${n}
+				<p class="days">DAYS</p>
+			</li>
+       		<li>
+				${hours}
+				<p class="days">Hours</p>
+			</li>
+       		<li>
+				${minutes}
+				<p class="days">Minutes</p>
+			</li>
+       		<li>
+				${seconds}
+				<p class="days">Seconds</p>
+			</li>
+       	</ul>
+       </div>`;
+    }
+
+  var d = new Date();
+  var weekday = new Array(7);
+  weekday[0] = "1";
+  weekday[1] = "2";
+  weekday[2] = "3";
+  weekday[3] = "4";
+  weekday[4] = "5";
+  weekday[5] = "6";
+  weekday[6] = "7";
+
+  var n = weekday[d.getDay()];
+  document.getElementById("day").innerHTML = n;    
+</script>
+</body>
+</html>

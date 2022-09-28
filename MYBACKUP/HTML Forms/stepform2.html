@@ -1,0 +1,137 @@
+<?php 
+/*template name: Step Form Template*/
+get_header(); ?>
+<?php nectar_page_header($post->ID); ?>
+<div class="container">
+	<div class="row">
+		<div class="main_section">
+			<div class="form_section">
+		        <form id="regForm" action="">				
+					<div class="mypagination"	>
+						<div class="step_patant">
+						    <span class="step"></span>
+						    <div class="step_txt">
+						    	<p>Quick Apply</p>
+						    </div>
+						</div>
+						<div class="step_patant">
+						    <span class="step"></span>
+						    <div class="step_txt">
+						    	<p>My Information</p>
+						    </div>
+						</div>
+						<div class="step_patant">
+						    <span class="step"></span>
+						    <div class="step_txt">
+						    	<p>My Experience</p>
+						    </div>
+						</div>
+						<div class="step_patant">
+						    <span class="step"></span>
+						    <div class="step_txt">
+						    	<p>Application Question 1 of 2</p>
+						    </div>
+						</div>
+						<div class="step_patant">
+						    <span class="step"></span>
+						    <div class="step_txt">
+						    	<p>Voluntary Disclosure</p>
+						    </div>
+						</div>
+						<div class="step_patant">
+						    <span class="step"></span>
+						    <div class="step_txt">
+						    	<p>Application Question 1 of 2</p>
+						    </div>
+						</div>
+						<div class="step_patant">
+						    <span class="step"></span>
+						    <div class="step_txt">
+						    	<p>Review</p>
+						    </div>
+						</div>								
+					</div>
+					<!---------STEP 1 START--------->
+					<div class="tab">
+						<div class="step1">
+							<h1>1</h1>
+						</div>					
+					</div>	
+					<!---------STEP 1 END--------->												
+					<!---------STEP 2 START------->	
+					<div class="tab">
+						<div class="step2">
+							<h1>2</h1>																															
+						</div>
+					</div>
+					<!---------STEP 2 END--------->	
+					<!---------STEP 3 START------->	
+					<div class="tab">
+						<div class="step3">
+						    <h1>3</h1>																						
+						</div>
+					</div>
+					<!---------STEP 3 END--------->
+					<!---------STEP 4 START------->	
+					<div class="tab">
+						<div class="step4">
+							<h1>4</h1>
+						</div>								
+					</div>
+					<!---------STEP 4 END--------->
+					<!---------STEP 5 START------->	
+					<div class="tab">
+						<div class="step5">
+						    <h1>5</h1>
+						</div>								
+					</div>
+					<!---------STEP 5 END--------->
+					<!---------STEP 6 START------->	
+					<div class="tab">
+						<div class="step6">
+						    <h1>6</h1>
+						</div>								
+					</div>
+					<!---------STEP 6 END--------->
+					<!---------STEP 7 START------->	
+					<div class="tab">
+						<div class="step7">
+						    <h1>7</h1>	
+						</div>								
+					</div>
+					<!---------STEP 7 END--------->									
+
+					<div class="next_preview_btn">
+					    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Back</button>
+					    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+					</div>
+		        </form>					
+				</div>			
+			</div>
+		</div>
+   </div>
+</div>
+
+<?php get_footer(); ?>
+
+<style type="text/css">
+/********STEP FORM CSS************/
+.mypagination .step_patant:nth-child(1) .step:before {width: 88px; left: 74px; }
+.mypagination .step_patant:nth-child(1) .step:after {width: 88px; left: 74px; }
+.mypagination .step_patant:last-child .step:before {width: 88px; right: 74px; }
+.mypagination .step_patant:last-child .step:after {width: 88px; right: 74px; }
+.mypagination p {font-size: 14px !important; }
+.mypagination {display: flex; text-align: center; }
+.step_patant {width: 100%; position: relative; }
+.form_section input.invalid {background-color: #ffdddd !important; }
+.form_section .tab {display: none; }
+.form_section .step h4 {line-height: 20px; color: #fff; font-family: el messiri; position: absolute; z-index: 9999; left: 0; right: 0; }
+.form_section .step {height: 15px; width: 15px; margin: 0 14%; background-color: #999999; border: none; border-radius: 50%; display: inline-block; opacity: 1; line-height: 60px; }
+.active:before {content: "" !important; height: 3px; width: 100%; position: absolute; background-color: #00a0db; left: 0; top: 6px; z-index: 9999; }
+.form_section .step.active {opacity: 1 !important; background-color: #00a0db !important; z-index: 9999 !important; }
+.form_section .step.finish {background-color: #999999; /*     opacity: 0.5; */ }
+span.step:after {content: ""; height: 3px; width: 100%; position: absolute; background-color: #999999; left: 0; top: 6px; z-index: 1; }
+button#prevBtn, button#nextBtn {padding: 10px 40px; font-size: 15px; color: #fff; border: none; font-family: montserrat; font-weight: 800; text-transform: capitalize; cursor: pointer; background: linear-gradient(to left, #00aeef 50%, #333333 50%); background-size: 212%; background-position: right bottom; transition: all .5s ease; margin: 0px 20px 0px 0px; }
+button#prevBtn:hover, button#nextBtn:hover {background-position: left bottom; text-decoration: none; background-size: 210%; color: #fff; }
+/********STEP FORM CSS************/		
+</style>

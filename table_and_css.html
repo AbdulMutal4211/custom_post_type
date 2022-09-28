@@ -1,0 +1,116 @@
+<form action="" method="post">
+	<ul class="filter">
+		<li><h3>Sort By:</h3></li>
+		<li class="fields_no_radius"><input type="date" name="" required=""></li>
+		<li><h3>Till:</h3></li>
+		<li class="fields_no_radius"><input type="date" name="" required=""></li>
+		<li><button class="theme_btn2">Apply</button></li>
+	</ul>
+</form>
+
+<div class="row">
+	<div class="col-lg-6 text-left">
+		<div class="fields">
+    		<div class="f_wrap">
+    			<span>Show</span>
+				<select id="show_entries">
+					<option value="10">10</option>
+					<option value="50">50</option>
+					<option value="100">100</option>
+					<option value="150">150</option>
+				</select>
+				<span>Entries</span>
+    		</div>
+    	</div>
+	</div>
+	<div class="col-lg-6 text-lg-right text-left">
+		<div class="fields">
+			<div class="f_wrap">
+				<input type="text" name="" id="table_filter" placeholder="Search">	
+			</div>
+		</div>
+	</div>
+</div>
+<table class="table">
+    <thead>
+	      <tr>
+		        <th>SR.No</th>
+		        <th>Job.ID</th>
+		        <th>Professional Name</th>
+		        <th>DATE</th>
+		        <th>STATUS</th>
+		        <th>ACTION</th>
+	      </tr>
+    </thead>
+    <tbody>
+	      <tr>
+		        <td>01</td>
+		        <td>001</td>
+		        <td>Mark Carson</td>
+		        <td>mm/dd/yy</td>
+		        <td><span class="in_process">In-Process</span></td>
+		        <td>
+		        	<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+		        	<ul class="onhover">
+		        		<li><a href="#">View</a></li>
+		        	</ul>
+		        </td>
+	      </tr>
+	      <tr>
+		        <td>02</td>
+		        <td>001</td>
+		        <td>Jhon Deo</td>
+		        <td>mm/dd/yy</td>
+		        <td><span class="completed">Completed</span></td>
+		        <td>
+		        	<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+		        	<ul class="onhover">
+		        		<li><a href="#">View</a></li>
+		        	</ul>
+		        </td>
+	      </tr>
+    </tbody>
+</table>
+<div class="row">
+	<div class="col-lg-6 text-left">
+		<p>Showing 1 to 20 of 52 entries</p> 
+	</div>
+	<div class="col-lg-6 text-lg-right text-left">
+		<nav aria-label="Page navigation example">
+			  <ul class="pagination justify-content-end">
+				    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+				    <li class="page-item"><a class="page-link" href="#">1</a></li>
+				    <li class="page-item"><a class="page-link" href="#">2</a></li>
+				    <li class="page-item"><a class="page-link" href="#">3</a></li>
+				    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+			  </ul>
+		</nav>
+	</div>
+</div>
+
+<style>
+ul.filter li {display: inline-block; }
+
+table {border-collapse: separate; border-spacing: 15px; }
+.table thead th {vertical-align: bottom; border-bottom: none !important; font-weight: 800; text-transform: uppercase; }
+.table td, .table th {vertical-align: middle !important; border-top: none !important; padding: 20px 20px; position: relative; }
+tr {box-shadow: 0px 0px 10px 0px #0000001f; }
+ul.onhover {position: absolute; left: 0; width: 100%; background-color: #fff; box-shadow: 0px 0px 10px 0px #00000040; padding: 20px; z-index: 99999; top: 50px; transform: scale(0); transition: .5s !important; } 
+.table td:hover ul.onhover {transform: scale(1); }
+select#show_entries {width: 80px !important; margin: 0px 11px; border-radius: 0 !important; padding: 11px !important; }
+input#table_filter {border-radius: 0 !important; padding: 14px !important; } 
+.in_process {color: #EEC10E; font-weight: 900; }
+.completed {color: #00D848; font-weight: 900; }
+	
+</style>					
+
+<script>
+$(document).ready(function(){
+  $("#table_filter").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("table tbody tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});	
+</script>

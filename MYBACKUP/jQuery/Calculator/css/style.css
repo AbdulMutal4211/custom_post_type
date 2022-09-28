@@ -1,0 +1,44 @@
+input.cal_btn {
+    width: 40px;
+    padding: 0 !important;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+input.eql_btn{
+    width: 40px;
+    padding: 0 !important;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;	
+}
+input.cal_btn:focus,input.eql_btn:focus {
+    outline: none !important;
+    border: 1px solid #3333338f;
+}
+.cal-body .screen_box input.screen:focus{
+	outline: none !important;
+}
+.cal-body {
+    width: 275px;
+    background-color: #3333;
+    text-align: center;
+    padding: 9px 0px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 9px -5px #000000ad;
+}
+.cal-body .cal_paid {
+    margin: auto;
+    display: table;
+}
+.cal-body .screen_box input.screen {
+    width: 257px;
+    margin: 0px 0px 10px 0px;
+    height: 36px;
+    border-radius: 10px;
+    background-color: #717e62;
+    font-size: 35px;
+        font-family: Quantico;
+}

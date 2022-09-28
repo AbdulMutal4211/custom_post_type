@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AOS Animation</title>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/aos.css" />
+</head>
+<style>
+.box {
+    background-color: #000;
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    margin: 0px 21px;
+}	
+ul li {
+    display: inline-block;
+    margin: 0px 15px;
+}
+</style>
+<body>
+<ul>
+	<li data-aos="fade-down"><a href="">Hme</a></li>
+	<li data-aos="fade-down" data-aos-duration="1000"><a href="">About</a></li>
+	<li data-aos="fade-down" data-aos-duration="1500"><a href="">Services</a></li>
+	<li data-aos="fade-down" data-aos-duration="2000"><a href="">Contact</a></li>
+	<li data-aos="fade-down" data-aos-duration="3000"><a href="">More Info...</a></li>
+</ul>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    easing: 'ease-in-out-sine'
+  });
+</script>
+</body>
+</html>

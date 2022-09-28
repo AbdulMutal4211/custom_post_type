@@ -1,0 +1,101 @@
+
+<style>
+.myTab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+.myTab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;  
+}
+.myTab button:hover {
+  background-color: #ddd;
+}
+.myTab button.active_btn {
+  background-color: #ccc;
+}
+.myTabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  width:100%;
+}
+.active_myTabs{display:inline-block;}
+</style>
+
+
+<h2>myTabs</h2>
+<p>Click on the buttons inside the myTabbed menu:</p>
+
+<div class="myTab">
+  <button class="myTablinks" onclick="pricing_func(ev, 'price_Website_Design')">Website Design</button>
+  <button class="myTablinks" onclick="pricing_func(ev, 'price_Web_Portal')">Web Portal</button>
+  <button class="myTablinks" onclick="pricing_func(ev, 'price_E_Commerce')">E Commerce</button>
+  <button class="myTablinks" onclick="pricing_func(ev, 'price_Mobile_Apps')">Mobile Apps</button>
+  <button class="myTablinks" onclick="pricing_func(ev, 'price_Web_Maintenance')">Web Maintenance</button>
+  <button class="myTablinks" onclick="pricing_func(ev, 'price_Branding')">Branding</button>
+  <button class="myTablinks" onclick="pricing_func(ev, 'price_SMM')">SMM</button>
+  <button class="myTablinks" onclick="pricing_func(ev, 'price_Video_Animaiton')">Video Animaiton</button>
+</div>
+
+
+<div id="price_Website_Design" class="myTabcontent ">
+  <h3>price_Website_Design</h3>
+  <p>price_Website_Design is the capital of France.</p> 
+</div>
+<div id="price_Web_Portal" class="myTabcontent">
+  <h3>price_Web_Portal</h3>
+  <p>price_Web_Portal is the capital of France.</p> 
+</div>
+<div id="price_E_Commerce" class="myTabcontent">
+  <h3>E Commerceaa</h3>
+  <p>E Commerce is the capital of France.</p> 
+</div>
+<div id="price_Mobile_Apps" class="myTabcontent">
+  <h3>price_Mobile_Apps</h3>
+  <p>price_Mobile_Apps is the capital of France.</p> 
+</div>
+<div id="price_Web_Maintenance" class="myTabcontent">
+  <h3>price_Web_Maintenancec</h3>
+  <p>price_Web_Maintenance is the capital of France.</p> 
+</div>
+<div id="price_Branding" class="myTabcontent">
+  <h3>price_Branding</h3>
+  <p>price_Branding is the capital of France.</p> 
+</div>
+<div id="price_SMM" class="myTabcontent">
+  <h3>price_SMM</h3>
+  <p>price_SMM is the capital of France.</p> 
+</div>
+<div id="price_Video_Animaiton" class="myTabcontent">
+  <h3>price_Video_Animaiton</h3>
+  <p>price_Video_Animaiton is the capital of France.</p> 
+</div>
+
+
+<script>
+function pricing_func(ev, citName) {
+  var i, myTabcontent, myTablinks;
+  myTabcontent = document.getElementsByClassName("myTabcontent");
+  for (i = 0; i < myTabcontent.length; i++) {
+    myTabcontent[i].style.display = "none";
+  }
+  myTablinks = document.getElementsByClassName("myTablinks");
+  for (i = 0; i < myTablinks.length; i++) {
+    myTablinks[i].className = myTablinks[i].className.replace(" active_btn", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active_btn";
+}
+</script>
+   
+</body>
+</html> 

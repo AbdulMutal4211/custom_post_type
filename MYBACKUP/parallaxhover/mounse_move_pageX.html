@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
+</head>
+<body>
+
+<div class="container">
+  <div id="movediv"></div>
+</div>
+<section class='mySlider'>
+  <div class="slider_txt">
+    <h2>This is Starbugs</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+  </div>
+  <div class="iceream">
+    <div class="slider_bg"></div>
+    <div class="clm">
+      <img src="images/ice1.png" class="slider_img animate__animated" id="slide_img">
+    </div>
+  </div>
+  <ul class="slider_pagination">
+    <li><a href="javascript:;"><img src="images/ice1.png" onclick="mySlider('#558c44')"></a></li>
+    <li><a href="javascript:;"><img src="images/ice2.png" onclick="mySlider('#cf5569')"></a></li>
+    <li><a href="javascript:;"><img src="images/ice3.png" onclick="mySlider('#d750b0')"></a></li>
+  </ul>
+
+  <div class="moon">
+    <?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="-4 0 330.812 311.812" style="enable-background:new 0 0 312.812 312.812;" xml:space="preserve">
+  <g>
+    <g>
+      <path d="M305.2,178.159c-3.2-0.8-6.4,0-9.2,2c-10.4,8.8-22.4,16-35.6,20.8c-12.4,4.8-26,7.2-40.4,7.2c-32.4,0-62-13.2-83.2-34.4
+        c-21.2-21.2-34.4-50.8-34.4-83.2c0-13.6,2.4-26.8,6.4-38.8c4.4-12.8,10.8-24.4,19.2-34.4c3.6-4.4,2.8-10.8-1.6-14.4
+        c-2.8-2-6-2.8-9.2-2c-34,9.2-63.6,29.6-84.8,56.8c-20.4,26.8-32.4,60-32.4,96c0,43.6,17.6,83.2,46.4,112s68,46.4,112,46.4
+        c36.8,0,70.8-12.8,98-34c27.6-21.6,47.6-52.4,56-87.6C314,184.959,310.8,179.359,305.2,178.159z"/>
+    </g>
+  </g>
+</svg>
+
+  </div>
+</section>
+
+<script>
+function mySlider(e){
+  var bg_color = document.querySelector('.slider_bg');
+  bg_color.style.background = e;
+}  
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).mousemove(function(event){
+  $('#movediv').css({left:event.pageX , top:event.pageY});
+}); 
+
+
+$('.slider_pagination li a').click(function(){
+  $('.clm').addClass('changed');
+});
+$('ul.slider_pagination li a img').click(function(){
+  var img_src = $(this,'ul.slider_pagination li  a img').attr('src');
+
+  setTimeout(function(){
+    $('img#slide_img').attr('src',img_src);
+  },500);
+    
+});
+setInterval(function(){
+  $('.clm').removeClass('changed');
+},2000);
+
+
+</script>
+
+<style type="text/css">
+ .moon {
+    width: 100px;
+}
+.moon:hover path {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+}
+.moon path {
+    stroke-width: 10px;
+    fill: transparent;
+    stroke: red;
+    stroke-dasharray: 1075;
+    stroke-dashoffset: 0;
+    transition: .9s !important;
+}
+.moon:hover path{
+  animation: animate-heart 2s linear forwards
+}
+@keyframes animate-heart{
+    0%{
+      stroke-dashoffset:0;
+    }
+    40%{
+      stroke-dashoffset:1076;
+    }
+    80%{
+      stroke-dashoffset:2150;
+      fill: transparent;
+    }
+    100%{
+      stroke-dashoffset:2150;
+      fill: red;
+    }
+}
+
+
+.slider_bg {
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    background-color: #558c44;
+    border-radius: 50%;
+    top: -90px;
+    right: -240px;
+    transition: .8s !important;
+}   
+.changed {
+    right: -500px !important;
+    opacity: 0;
+}
+.clm {
+    position: relative;
+    right: 0;
+    transition:.8s !important;
+}  
+.iceream {
+    display: inline-block;
+    float: right;
+    position: relative;
+}
+.mySlider ul li {
+    display: inline-block;
+    margin: 0px 8px;
+}
+.iceream img {
+    float: right;
+    width: 68%;
+    height: 620px;
+    object-fit: contain;
+    transition: .8s !important;
+}
+.slider_txt {
+    position: absolute;
+    top: 50%;
+    transform: translate(0px, -50%);
+}
+section.mySlider {
+    position: relative;
+}
+
+.mySlider ul {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
+.mySlider ul li a img {
+    width: 50px;
+}
+.mySlider ul li {
+    list-style: none;
+}  
+ .mySlider h1 {
+   justify-content: center;
+    position: relative;
+    font-size: 100px;
+    z-index: -1;
+}
+
+#movediv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: revert;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    z-index: 99999 !important;
+}
+.mySlider {
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+}
+</style>
+</body>
+</html>

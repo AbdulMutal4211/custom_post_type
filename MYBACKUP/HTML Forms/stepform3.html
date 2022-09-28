@@ -1,0 +1,241 @@
+<?php 
+/*template name: Step Form Template*/
+get_header(); ?>
+<?php nectar_page_header($post->ID); ?>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div class="container">
+	<div class="row">
+		<div class="main_section">
+			<div class="form_section">
+				<div class="main_heading">
+					<h1>Book a Repair Appointment</h1>
+					<img class="border_img" src="https://dev57.onlinetestingserver.com/nowfixappliancerepair/wp-content/uploads/2020/07/border.jpg">
+				</div>
+		        <form id="regForm" action="">
+		            <div class="blue_bg"></div>				
+					<div class="mypagination"	>
+						<div class="step_patant">
+						    <span class="step"><p>1</p><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+						    <div class="step_txt">
+						    	<p>Appliance</p>
+						    </div>
+						</div>
+						<div class="step_patant">
+						    <span class="step"><p>2</p><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+						    <div class="step_txt">
+						    	<p>Type</p>
+						    </div>
+						</div>
+						<div class="step_patant">
+						    <span class="step"><p>3</p><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+						    <div class="step_txt">
+						    	<p>Brand</p>
+						    </div>
+						</div>
+						<div class="step_patant">
+						    <span class="step"><p>4</p><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+						    <div class="step_txt">
+						    	<p>Details</p>
+						    </div>
+						</div>
+						<div class="step_patant">
+						    <span class="step"><p>5</p><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+						    <div class="step_txt">
+						    	<p>Contact</p>
+						    </div>
+						</div>
+						<div class="step_patant">
+						    <span class="step"><p>6</p><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+						    <div class="step_txt">
+						    	<p>Date</p>
+						    </div>
+						</div>
+						<div class="step_patant">
+						    <span class="step"><p>7</p><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+						    <div class="step_txt">
+						    	<p>Confirm</p>
+						    </div>
+						</div>	
+						<div class="step_patant">
+						    <span class="step"><p>8</p><i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
+						    <div class="step_txt">
+						    	<p>Done</p>
+						    </div>
+						</div>								
+					</div>
+					<!---------STEP 1 START--------->
+					<div class="tab">
+						<div class="step1">
+							<div class="top_heading">
+								<h2>Which appliance is broken?</h2>
+								<img class="border_img" src="https://dev57.onlinetestingserver.com/nowfixappliancerepair/wp-content/uploads/2020/07/border.jpg">
+							</div>
+						</div>					
+					</div>	
+					<!---------STEP 1 END--------->												
+					<!---------STEP 2 START------->	
+					<div class="tab">
+						<div class="step2">
+							<h1>2</h1>																															
+						</div>
+					</div>
+					<!---------STEP 2 END--------->	
+					<!---------STEP 3 START------->	
+					<div class="tab">
+						<div class="step3">
+						    <h1>3</h1>																						
+						</div>
+					</div>
+					<!---------STEP 3 END--------->
+					<!---------STEP 4 START------->	
+					<div class="tab">
+						<div class="step4">
+							<h1>4</h1>
+						</div>								
+					</div>
+					<!---------STEP 4 END--------->
+					<!---------STEP 5 START------->	
+					<div class="tab">
+						<div class="step5">
+						    <h1>5</h1>
+						</div>								
+					</div>
+					<!---------STEP 5 END--------->
+					<!---------STEP 6 START------->	
+					<div class="tab">
+						<div class="step6">
+						    <h1>6</h1>
+						</div>								
+					</div>
+					<!---------STEP 6 END--------->
+					<!---------STEP 7 START------->	
+					<div class="tab">
+						<div class="step7">
+						    <h1>7</h1>	
+						</div>								
+					</div>
+					<!---------STEP 7 END--------->	
+					<!---------STEP 8 START------->	
+					<div class="tab">
+						<div class="step8">
+						    <h1>8</h1>	
+						</div>								
+					</div>
+					<!---------STEP 8 END--------->														
+					<div class="next_preview_btn">
+					    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Back</button>
+					    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+					</div>
+		        </form>							
+			</div>
+		</div>
+    </div>
+</div>
+
+
+
+<?php get_footer(); ?>
+
+<style>
+/********STEP FORM CSS************/
+.step_txt p {color: #000;font-size: 16px;font-weight: 600;margin-top: 10px;}
+.next_preview_btn {text-align: center;margin-top: 40px;}
+.main_heading {margin-bottom: 60px;text-align: center;}
+form#regForm {position: relative;}
+.blue_bg {background-color: #1f79b8;height: 50px;position: absolute;top: -31px;left: 0;right: 0;z-index: -1;}
+.active:after {content: "" !important; height: 70px; width: 41px; position: absolute; background-color: #ef5927; left: 57px; top: -31px; z-index: -1; border-radius: 0px 0px 20px 20px; }
+.form_section .step.active p {display: none;}
+.form_section .step.active i {display: block; color: #ef5927;font-size: 20px;}
+.form_section .step i {display: none;}
+.form_section .step.finish {background-color: #ffff; /* opacity: 0.5; */ }
+.form_section .step {height: 35px; width: 35px; margin: 0 14%; background-color: #fff; border-radius: 50%; display: inline-block; opacity: 1; line-height: 29px; border: 4px solid #1f79b8; }
+.form_section .step.active {opacity: 1 !important; background-color: #ffff !important; z-index: 9999 !important; border-color: #fff; }
+.mypagination p {font-size: 14px !important; }
+.mypagination {display: flex; text-align: center; }
+.step_patant {width: 100%; position: relative; }
+.form_section input.invalid {background-color: #ffdddd !important; }
+.form_section .tab {display: none; }
+.form_section .step h4 {line-height: 20px; color: #fff; font-family: el messiri; position: absolute; z-index: 9999; left: 0; right: 0; }
+
+button#prevBtn, button#nextBtn {padding: 10px 60px; font-size: 16px; color: #fff; border: none; font-family: open sans; font-weight: 400; text-transform: capitalize; cursor: pointer; background: linear-gradient(to left, #ef5927 50%, #1f79b8 50%); background-size: 212%; background-position: right bottom; transition: all .5s ease; margin: 0px 20px 0px 0px; border-radius: 5px; }
+button#prevBtn:hover, button#nextBtn:hover {background-position: left bottom; text-decoration: none; background-size: 210%; color: #fff; }
+/********STEP FORM CSS************/	
+</style>
+
+<script type="text/javascript">
+
+	var currentTab = 0; // Current tab is set to be the first tab (0)
+	showTab(currentTab); // Display the current tab
+
+	function showTab(n) {
+	  // This function will display the specified tab of the form ...
+	  var x = document.getElementsByClassName("tab");
+	  x[n].style.display = "block";
+	  // ... and fix the Back/Next buttons:
+	  if (n == 0) {
+	    document.getElementById("prevBtn").style.display = "none";
+	  } else {
+	    document.getElementById("prevBtn").style.display = "inline";
+	  }
+	  if (n == (x.length - 1)) {
+	    document.getElementById("nextBtn").innerHTML = "Submit";
+	  } else {
+	    document.getElementById("nextBtn").innerHTML = "Next";
+	  }
+	  // ... and run a function that displays the correct step indicator:
+	  fixStepIndicator(n)
+	}
+
+	function nextPrev(n) {
+	  // This function will figure out which tab to display
+	  var x = document.getElementsByClassName("tab");
+	  // Exit the function if any field in the current tab is invalid:
+	  if (n == 1 && !validateForm()) return false;
+	  // Hide the current tab:
+	  x[currentTab].style.display = "none";
+	  // Increase or decrease the current tab by 1:
+	  currentTab = currentTab + n;
+	  // if you have reached the end of the form... :
+	  if (currentTab >= x.length) {
+	    //...the form gets submitted:
+	    document.getElementById("regForm").submit();
+	    return false;
+	  }
+	  // Otherwise, display the correct tab:
+	  showTab(currentTab);
+	}
+
+	function validateForm() {
+	  // This function deals with validation of the form fields
+	  var x, y, i, valid = true;
+	  x = document.getElementsByClassName("tab");
+	  y = x[currentTab].getElementsByTagName("input");
+	  // A loop that checks every input field in the current tab:
+	  for (i = 0; i < y.length; i++) {
+	    // If a field is empty...
+	    if (y[i].value == "") {
+	      // add an "invalid" class to the field:
+	      y[i].className += " invalid";
+	      // and set the current valid status to false:
+	      valid = false;
+	    }
+	  }
+	  // If the valid status is true, mark the step as finished and valid:
+	  if (valid) {
+	    document.getElementsByClassName("step")[currentTab].className += " finish";
+	  }
+	  return valid; // return the valid status
+	}
+
+	function fixStepIndicator(n) {
+	  // This function removes the "active" class of all steps...
+	  var i, x = document.getElementsByClassName("step");
+	  for (i = 0; i < x.length; i++) {
+	    x[i].className = x[i].className.replace(" active", "");
+	  }
+	  //... and adds the "active" class to the current step:
+	  x[n].className += " active";
+	} 	
+</script>	

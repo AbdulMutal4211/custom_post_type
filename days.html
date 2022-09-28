@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>clock</title>
+</head>
+<style>
+#time{width: 100%;font-size:70px;}	
+
+</style>
+<body>
+<div id="time"></div>
+<div class="day"></div>
+<script type="text/javascript">
+
+	setInterval(myClock , 500)
+
+	function myClock(){
+	   var n = weekday[d.getDay()];
+
+       document.getElementById('time').innerHTML = `
+       <div class="my_timer">
+       	<ul>
+       		<li>
+  				${n}
+			     </li>
+       	</ul>
+       </div>`;
+    }
+
+  var d = new Date();
+  var weekday = new Array(7);
+  weekday[0] = "Sunday";
+  weekday[1] = "Monay";
+  weekday[2] = "Tuesday";
+  weekday[3] = "Wednesday";
+  weekday[4] = "Thursday";
+  weekday[5] = "Friday";
+  weekday[6] = "Saturday";
+
+  var n = weekday[d.getDay()];
+  document.getElementById("day").innerHTML = n;    
+</script>
+</body>
+</html>

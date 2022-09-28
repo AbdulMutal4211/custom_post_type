@@ -1,0 +1,60 @@
+<div class="myQuantity quantity_wrap">
+    <input type="text" name="qty" class="qty" maxlength="12" value="0">
+    <div class="button-myQuantity">
+        <button class="cart-qty-minus" type="button" value="-">-</button>
+        <button class="cart-qty-plus" type="button" value="+">+</button>
+    </div>
+</div>
+
+
+<script>
+var incrementPlus;
+var incrementMinus;
+
+var buttonPlus  = jQuery(".cart-qty-plus");
+var buttonMinus = jQuery(".cart-qty-minus");
+
+var incrementPlus = buttonPlus.click(function() {
+	var $n = jQuery(this)
+		.parent(".button-myQuantity")
+		.parent(".myQuantity")
+		.find(".qty");
+	$n.val(Number($n.val())+1 );
+});
+
+var incrementMinus = buttonMinus.click(function() {
+		var $n = jQuery(this)
+		.parent(".button-myQuantity")
+		.parent(".myQuantity")
+		.find(".qty");
+	var amount = Number($n.val());
+	if (amount > 0) {
+		$n.val(amount-1);
+	}
+});	
+</script>
+
+<style type="text/css">
+.quantity_wrap {
+    position: relative;
+}
+.quantity_wrap input.qty {
+    text-align: center;
+    border: 1px solid #c2c2c2;
+    background-color: transparent;
+}
+html body div .button-myQuantity button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border: none;
+    background-color: #000;
+    border-radius: 0 !important;
+    color: #fff !important;
+    width: 30px;
+    cursor: pointer;
+}
+button.cart-qty-plus {
+    right: 0;
+}	
+</style>
